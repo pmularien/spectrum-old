@@ -2,8 +2,8 @@
  * Copyright (c) 2014  Paul Bernard
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
- * you MAY not use this file except in compliance with the License.
- * You MAY obtain a copy of the License at
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
  *
@@ -30,7 +30,7 @@ object ItalyEnum extends Enumeration {
   val SETTLEMENT = Value(1)
   val EXCHANGE = Value(2)
 
-  def valueOf(market: Int) = market match {
+  def valueOf(market: Int) : ItalyEnum = market match {
     case 1 => SETTLEMENT
     case 2 => EXCHANGE
     case _ => throw new Exception("Valid units = 1")
@@ -102,7 +102,7 @@ class Italy extends Calendar  {
 
   private class Settlement extends Western {
 
-    override def name = "Italian Settlement"
+    override def name : String = "Italian Settlement"
 
     override def isBusinessDay(date: Date): Boolean = {
 
@@ -132,7 +132,7 @@ class Italy extends Calendar  {
 
   private class Exchange extends Western {
 
-    override def name = "Milan stock exchange"
+    override def name : String = "Milan stock exchange"
 
     override def isBusinessDay(date: Date): Boolean = {
 

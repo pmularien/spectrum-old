@@ -1,23 +1,40 @@
-*.class
-*.log
-*.iml
-
-# sbt specific
-.cache/
-.history/
-.lib/
-dist/*
+out
+build
+/bin/
+/classes
+/dist
+/out
+/target
 target/
+dist/*
 lib_managed/
 src_managed/
 project/boot/
 project/plugins/project/
-
-# Scala-IDE specific
+*.iml
+*.ipr
+*.iws
+*.class
+*.log
+.cache/
+.history/
+.lib/
+.idea
+.idea/scopes/
+.idea/dictionaries/
+.idea/inspectionProfiles/
+.idea/libraries/
+.idea/modules/
+.idea/.name
+.idea/*.xml
 .scala_dependencies
 .worksheet
+.classpath
+.project
+.settings
+.DS_Store
+org.scala-ide.sdt.core/META-INF/MANIFEST.MF
+org.scala-ide.sdt.update-site/site.xml
+credentials.sbt
 
-#intellij IDE specific
-.idea/
-atlassian-ide-plugin.xml
 

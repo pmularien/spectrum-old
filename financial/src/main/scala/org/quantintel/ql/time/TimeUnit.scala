@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
- * Scala Finance is based in part on:
+ * Spectrum Finance is based in part on:
  *        QuantLib. http://quantlib.org/
  *
  */
@@ -28,7 +28,7 @@ object TimeUnit extends Enumeration {
   val MONTHS = Value(2)
   val YEARS = Value(3)
 
-  def valueOf(unit: Int) = unit match {
+  def valueOf(unit: Int): TimeUnit = unit match {
     case 0 => DAYS
     case 1 => WEEKS
     case 2 => MONTHS
@@ -51,5 +51,6 @@ object TimeUnit extends Enumeration {
     if (value == YEARS) "Y"
     ""
   }
+
 
 }
