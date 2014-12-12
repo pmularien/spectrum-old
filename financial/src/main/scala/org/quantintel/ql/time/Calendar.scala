@@ -69,10 +69,16 @@ abstract class Calendar {
 
   def name : String = impl.name
 
+  /**
+   * This implementation of isBusinessDay will consult the set of
+   * added and removed holidays first, before delegating to the implementation.
+   * 
+   * @param d the date to check
+   */
   def isBusinessDay(d: Date) : Boolean = {
     if (addedHolidays.contains(d)) false
     else if (removedHolidays.contains(d)) true
-    else isBusinessDay(d)
+    else impl.isBusinessDay(d)
   }
 
   def isHoliday(d: Date) : Boolean = {
