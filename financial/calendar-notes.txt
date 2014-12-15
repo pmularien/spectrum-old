@@ -1,0 +1,6 @@
+Canada - QL does not flag easter Monday as a holiday. Intentional fix, or bug?
+
+why are Calendar exception messages var and not val?
+
+Canada - Christmas and Boxing day - if Christmas is on a Sunday, why would it be celebrated on the 27th and not the 26th??
+

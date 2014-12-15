@@ -38,14 +38,12 @@ libraryDependencies ++= Seq(
   "org.scalastyle"        % "scalastyle_2.11"       % "0.6.0"       % "test"
 )
 
-instrumentSettings
+ScoverageSbtPlugin.ScoverageKeys.coverageMinimum := 70
 
-ScoverageKeys.minimumCoverage := 70
+ScoverageSbtPlugin.ScoverageKeys.coverageFailOnMinimum := false
 
-ScoverageKeys.failOnMinimumCoverage := false
-
-ScoverageKeys.highlighting := {
-  if (scalaBinaryVersion.value == "2.11.4") false
+ScoverageSbtPlugin.ScoverageKeys.coverageHighlighting := {
+  if (scalaBinaryVersion.value == "2.11.4") true
   else false
 }
 
