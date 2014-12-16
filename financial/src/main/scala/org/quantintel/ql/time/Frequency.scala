@@ -20,7 +20,9 @@
 
 package org.quantintel.ql.time
 
-/**
+/** Used to represent the length of common time periods. Typically the frequency is
+ *  represented with [[TimeUnit]] as well, in a [[Period]].
+ * 
  * @author Paul Bernard
  */
 object Frequency extends Enumeration {
